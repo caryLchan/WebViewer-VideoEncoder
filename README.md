@@ -38,7 +38,7 @@ If you would like to "upload" a file (it actually won't upload it), however, it 
 
 After the encoding is complete (takes awhile, especially because of the 4k video file), a button will be available to select the "uploaded" video.
 
-***The file path to the video must be an absolute path in order for this APP to find, encode, and save the files for future viewing.  Inputting the title is also required!
+***The file path to the video must be an absolute path in order for this APP to find, encode, and save the files for future viewing.  Inputting the title is also required!***
 
 
 Thanks and enjoy!
