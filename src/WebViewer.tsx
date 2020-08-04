@@ -11,6 +11,7 @@ const WebViewer = () => {
   const [init, setInit] = useState(false);
   const [view, setView] = useState(false);
   const startView = () => setView(true);
+  const backButton = () => setView(false);
   const [playData, setPlayData] = useState([['','']])
   const [currVid, setVid] = useState(['','','','','']);
   const [quality, setQuality] = useState('');
@@ -91,6 +92,9 @@ const WebViewer = () => {
                 <MenuItem value={currVid[4]}>240p</MenuItem>
               </Select>
             </FormControl>
+          </div>
+          <div>
+            <button onClick={backButton}>Back</button>
           </div>
         </div>
         : <p>Loading...</p>}
