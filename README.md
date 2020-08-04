@@ -5,35 +5,40 @@ This library abstracts the complex command-line usage of ffmpeg into a fluent, e
 ### Install `home brew` for Mac
 
 Paste this in Mac/Linux command window: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`<br />
-Visit https://brew.sh/ for more details
+Visit https://brew.sh/ for more details on homebrew
 
 ### Install `ffmpeg`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Paste this in Mac/Linux command window: `brew install ffmpeg`<br />
+Visit https://ffmpeg.org/ for more details on ffmpeg
 
-### `npm run build`
+### After downloading or cloning this repo, install `node_modules`:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From the directory folder of this app in the Mac/Linux window, run: `npm install` to install all dependencies<br />
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Setup .env file:
+Create a `.env` file with the key `PGDATA="SecretKey"`.
+This will connect you to our PostgreSQL database.  Please email me if you do not have access.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### To boot up the server:
 
-### `npm run eject`
+From the directory folder of this app in the Mac/Linux window, run: `npm run dev`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### To boot up the client:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+From the directory folder of this app in the Mac/Linux window, run: `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After running `npm run dev` to boot up the server and `npm start` to boot up the client, the web viewer should be have been launched on your browser from your `localhost:8080`.  There should be two demo videos `Big Buck Bunny` and `Iceland Waterfall`.  Each button will lead to the Video Player (defaulted to 480p quality) and a dropdown menu with options from: `4k, 1080p, 480p, 240p`.
 
-## Learn More
+### Upload Script
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you would like to "upload" a file (it actually won't upload it), however, it will encode it and save the video files into the public folder in the following formats: `4k, 1080p, 480p, 240p`.  It will also save an entry to the PostgreSQL DB for future viewing.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+After the encoding is complete (takes awhile, especially because of the 4k video file), a button will be available to select the "uploaded" video.
+
+***The file path to the video must be an absolute path in order for this APP to find, encode, and save the files for future viewing.  Inputting the title is also required!
+
+
+Thanks and enjoy!
