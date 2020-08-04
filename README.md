@@ -1,6 +1,6 @@
 ## Getting Started
 
-This library abstracts the complex command-line usage of ffmpeg. In order to be able to use this module, make sure you have ffmpeg installed on your system (including all necessary encoding libraries like libmp3lame or libx264).  Instructions below.
+This app abstracts the complex command-line usage of ffmpeg. In order to be able to use this app, make sure you have ffmpeg installed on your system (including all necessary encoding libraries like libmp3lame or libx264).  Instructions below.
 
 ### Install `home brew` for Mac
 
